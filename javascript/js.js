@@ -16,9 +16,9 @@ $(document).ready(() => {
 
 
 
-    var text = "ОДНАЖДЫ МНЕ ПРИСНИЛСЯ СТРАШНЫЙ СОН, ПРО МОНСТРА, КОТОРЫЙ ПЫТАЛСЯ ПОГЛАТИТЬ МЕНЯ..."; // Ваш текст
-	var delay = 180; // Скорость печатания
-	var elem = document.getElementById("result"); // id элемента для вывода результата
+    var text = "ОДНАЖДЫ МНЕ ПРИСНИЛСЯ СТРАШНЫЙ СОН, ПРО МОНСТРА, КОТОРЫЙ ПЫТАЛСЯ ПОГЛАТИТЬ МЕНЯ..."; 
+	var delay = 180; 
+	var elem = document.getElementById("result"); 
 
 	var print_text = function(text, elem, delay) {
 		
@@ -44,9 +44,9 @@ $(document).ready(() => {
 
 
 
-    var text = "ДУМАЮ,МНЕ ПОНАДОБИТСЯ ТВОЯ ПОМОЩЬ, ЧТОБЫ СТЕРЕТЬ ЕГО ИЗ СВОЕЙ ПАМЯТИ."; // Ваш текст
-	var delay = 180; // Скорость печатания
-	var elem = document.getElementById("result2"); // id элемента для вывода результата
+    var text = "ДУМАЮ,МНЕ ПОНАДОБИТСЯ ТВОЯ ПОМОЩЬ, ЧТОБЫ СТЕРЕТЬ ЕГО ИЗ СВОЕЙ ПАМЯТИ."; 
+	var delay = 180; 
+	var elem = document.getElementById("result2"); 
 
 	var print_text = function(text, elem, delay) {
 		
