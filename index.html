@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="stylesheet/img/favicon.svg">
+    <link rel="stylesheet" href="stylesheet/style.css">  
+    <style>
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+            background-color: #111111;
+            aspect-ratio: 1 / 1;
+        }
+
+        .block1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto; 
+            /* opacity: 0; // Скрываем фон и сам попап
+            pointer-events: none; // Запрещаем ему быть целью событий
+            transition: 0.5s all; */
+        }
+
+        .display1 {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("img/display1.svg");
+            margin-top: 2%;
+            margin-left: 1.5% ;
+        }
+
+        .dialogwindow {
+            width: 110%;
+            height: 110%;
+        }
+
+
+        .bottonmore, .bottongo, .buttonok, .bottongotwo, .bottongothree, .bottonfour {
+            width: 5%;
+            height: 5%;
+            position: absolute;
+            left: 20%;
+            bottom: 8%;
+        }
+
+        .bottonmore:hover, .bottongo:hover, .bottongotwo:hover, .bottongothree:hover, .bottonfour {
+            -webkit-filter: sepia(1) hue-rotate(350deg) saturate(60);
+            filter: sepia(1) hue-rotate(350deg) saturate(60);
+        } 
+        
+        .bottonmore {
+            background-color: transparent;
+        }
+
+        .bottongo, .bottongotwo, .bottongothree, .bottonfour {
+           left: 70%;
+        }
+
+        .buttonok {
+            background-image: url('img/buttonok.svg');
+            background-size: 100% 100%;
+            background-color: transparent;
+            left: 46.5%;
+            bottom: 29%;
+        }
+
+        .windowup {
+            display: none;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            left: 24%;
+            bottom: 25%;
+            background-image: url('img/windowup.svg');
+            background-size: 100% 100%;
+        }
+
+        /* .windowup.active {
+            left: 30%;
+            transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем
+            transition: 0.5s all;
+
+        } */
+
+
+        .block2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+
+        .clay1 {
+            width: 56%;
+            height: 58%;
+            margin-left: 19%;
+            margin-top: 6%;
+        }
+
+        .block3 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+
+        .text, .text2 {
+            width: 12%;
+            height: 20%;
+            position: absolute;
+            margin-left: 57.5%;
+            margin-top: 8%;
+            font-size: 100%;
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 118.1%;
+            letter-spacing: 0.055em;
+            color: #ffffff;
+        }
+
+        .text2 {
+            margin-left: 54%;
+            margin-top: 16%;
+        }
+
+        .textmrgn {
+            margin-left: 58.9%;
+            margin-top: 8%;
+        }
+
+        .text2mrgn {
+            margin-left: 55.7%;
+            margin-top: 15%;
+        }
+
+        .display2 {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("img/display2.svg");
+            margin-left: 6%;
+        }
+
+        .clayfight {
+            overflow: hidden
+        }
+
+        .claygo {
+            margin-left: 32.5%;
+            margin-top: 18.3%;
+            animation-name: rocket;
+            animation-duration: 9s;
+            animation-play-state: paused;
+        }
+
+        @keyframes rocket {
+            
+        }
+
+        .displaylog {
+            width: 100%;
+            height: 100%;
+            background-image: url("img/loading.svg");
+            display: block;
+            overflow: hidden;
+        }
+
+        .loadingball, .loadingballtwo {
+            margin-top: 23.5%;
+            margin-left: 48.5%;
+            animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes rotation {
+        0% {
+            transform:rotate(0deg);
+        }
+        100% {
+            transform:rotate(360deg);
+        }
+        }
+        
+
+        .display3 {
+            width: 110vw;
+            height: 110vh;
+            margin-left: -5%;
+            
+        }
+
+        .block7 {
+            background-image: url('img/clouds.svg');
+            background-size: 70%;
+            animation: cloudsmove 3s linear infinite;
+        }
+
+        @keyframes cloudsmove {
+            0% { color: #ffffff;}
+            50% { color: #206234;}
+            100% { color: #ffffff;}
+        }
+
+        .display4 {
+            width: 100vw;
+            height: 100vh; 
+        }
+
+        #monster { 
+            list-style-type: none;
+            column-count: 3; 
+            margin-top: 14px; 
+            padding: 0.2%; 
+            width: 867.11px; 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        
+        #monster li { 
+            margin-top: 4%; 
+            float: left; 
+            width: 278.95px;
+            height: 214.35px;
+        }
+
+        .part7, .part8, .part9 {
+            margin-left: -2%;
+        }
+
+        .gameover {
+            width: 100%;
+            height: 100%;
+            background-image: url("img/gameoverdisplay.svg");
+            display: block;
+            overflow: hidden;
+            margin-left: 3%;
+        }
+
+        .choice {
+            width: 165px;
+            list-style-type: none;
+            column-count: 2; 
+            margin-left: 42%;
+            margin-top: 30%;
+        }
+
+        .yesno {
+            float: left;
+        }
+
+
+
+    </style> 
+    <title>MINDRUN</title>
+</head>
+<body>
+    
+    <!-- ЭКРАН 1 -->
+
+    <div class="block1">
+
+          <div id="dialog" title="">
+            <img src="img/dialog.svg" alt="" class="dialogwindow">
+          </div>
+
+        <div class="display1"></div>
+
+        <div class="bottons">
+            <div class="bottonmore" id="opener">
+                <img src="img/buttonmore.svg" alt=""> 
+            </div>
+
+    
+            <div class="bottongo">
+                <img src="img/buttongo.svg" alt="">
+            </div>
+        </div>
+
+        <!-- <div id="window" class="windowup"></div> -->
+        <!-- <button id="myBtnclose" class="buttonok"></button> -->
+
+    </div>
+
+            <!-- ВСПЛЫВАЮЩЕЕ ОКНО -->
+
+    <!-- ЭКРАН 2 -->
+
+    <div class="block2">
+
+
+        <div id="result" class="text"></div>
+
+        <div id="result2" class="text2"></div>
+
+        <div>
+            <img src="img/clay1.svg" alt="" class="clay1">
+        </div>
+
+        <div class="bottongotwo">
+            <img src="img/buttongo.svg" alt="">
+        </div>
+
+
+
+        
+    </div>
+    
+    <!-- ЭКРАН 3 -->
+
+    <div class="block3">
+
+        <div class="display2">
+            <div class="clayfight"><img src="img/claygo.svg" alt="" class="claygo cut" id="claygojs"></div>
+        </div>
+
+    </div>
+
+        <!-- ЭКРАН 4 -->
+
+    <div class="block4 displaylog">
+            <img src="img/loadingball.svg" alt="" class="loadingball">
+    </div>
+
+        <!-- ЭКРАН 5 -->
+
+    <div class="block6">
+
+
+            <div id="result3" class="text textmrgn"></div>
+    
+            <div id="result4" class="text2 text2mrgn"></div>
+    
+            <div>
+                <img src="img/clay2.svg" alt="" class="clay1">
+            </div>
+    
+            
+            <div class="bottongothree">
+                <img src="img/buttongo.svg" alt="">
+            </div>
+    
+    
+    
+            
+    </div>
+
+                <!-- ЭКРАН 6 -->
+
+    <div class="block7">
+
+        <div class="block7">
+        </div>
+        <div class="">
+            <img src="img/display3.svg" alt="" class="display3">
+        </div>
+            
+                    
+    </div>
+
+    <!-- ЭКРАН 5 -->
+
+    <div class="block8">
+
+            
+     <div class="block9">
+        <img src="img/display4.svg" alt="" class="display4">
+     </div>
+                            
+                                    
+    </div>
+
+
+        <!-- ЭКРАН 5 -->
+
+
+    <div class="block11">
+        <ul id="monster">
+            <li class="part1"><img src="img/puzzle1.svg" alt=""></li>
+            <li class="part2"><img src="img/puzzle4.svg" alt=""></li>
+            <li class="part3"><img src="img/puzzle7.svg" alt=""></li>
+            <li class="part4"><img src="img/puzzle2.svg" alt=""></li>
+            <li class="part5"><img src="img/puzzle5.svg" alt=""></li>
+            <li class="part6"><img src="img/puzzle8.svg" alt=""></li>
+            <li class="part7"><img src="img/puzzle3.svg" alt=""></li>
+            <li class="part8"><img src="img/puzzle6.svg" alt=""></li>
+            <li class="part9"><img src="img/puzzle9.svg" alt=""></li>
+          </ul>
+    </div>
+
+
+    <div class="block12">
+        <div class="">
+            <img src="img/display5.svg" alt="" class="display4">
+     </div>
+    </div>
+
+    <div class="block13 displaylog">
+        <img src="img/loadingball.svg" alt="" class="loadingballtwo">
+    </div>
+
+    <div class="block14">
+        <img src="img/windisplay.svg" alt="" class="display4">
+    </div>
+
+    <div class="block15 gameover">
+
+        <ul class="choice">
+            <li><img src="img/yes.svg" alt="" class="yesno yes"></li>
+            <li><img src="img/no.svg" alt="" class="yesno no"></li>
+        </ul>
+    </div>
+
+    <div class="block16">
+        <img src="img/Finalydisplay.svg" alt="" class="display4">
+    </div>
+
+
+
+
+
+
+    <script src="javascript/jquery-3.6.3.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="javascript/js.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+</body>
+</html>
