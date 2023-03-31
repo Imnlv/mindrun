@@ -1,5 +1,5 @@
 
-
+// переключение между экранами при помощи кнопок и экранов
 
 $(document).ready(() => {
     $('.bottongo').on('click', () => {
@@ -127,6 +127,8 @@ $(document).ready(() => {
 //     $( "#dialog" ).dialog();
 //   } );
 
+// для открытия диалогового окна в первом экране
+
 $( function() {
     $( "#dialog" ).dialog({
       autoOpen: false,
@@ -145,6 +147,8 @@ $( function() {
     });
   } );
 
+
+// печатающий текст в пояснительных экранах
 
     var text = "ОДНАЖДЫ МНЕ ПРИСНИЛСЯ СТРАШНЫЙ СОН, ПРО МОНСТРА, КОТОРЫЙ ПЫТАЛСЯ ПОГЛАТИТЬ МЕНЯ..."; 
 	var delay = 180; 
@@ -215,11 +219,15 @@ $( function() {
 	}
 	print_text(text, elem, delay);
 
+
+// второе испытание с картинкой
+
 	$( function() {
 		$( "#monster" ).sortable();
 		$( "#monster" ).disableSelection();
 	  } );
 
+// изменение последнего экрана при наведении мышки
 
 	showblood.onmouseover = function() {
 	showblood.style.backgroundImage = "url('img/Finalydisplay.svg')";
@@ -229,6 +237,9 @@ $( function() {
 	showblood.style.backgroundImage = "url('img/bloodfinal.svg')";
 	};
 
+
+
+// печатающийся текст
 
 	var text = "Я ОЧЕНЬ ЛЮБИЛ ЛЕС ВОЗЛЕ ДОМА, ДО БОЛЬНИЦЫ МЫ ЧАСТО ГУЛЯЛИ ТАМ.."; 
 	var delay = 180; 
@@ -263,24 +274,6 @@ $( function() {
 	print_text(text, elem, delay);
 
 
-	$('.ewleaf1').click(function(){
-		$(this).hide();
-	   });
-	   $('.ewleaf2').click(function(){
-		$(this).hide();
-	   });
-	   $('.ewleaf3').click(function(){
-		$(this).hide();
-	   });
-	
-	   $('.uberi1').click(function(){
-		$('.bubblepop').show();
-	   })
-	
-	   $('.helpfrog').click(function(){
-		$('.block4').hide();
-		$('.block2').show();
-	   })
 
 
 
